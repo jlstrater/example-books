@@ -1,9 +1,9 @@
 package ratpack.examples.book.docs
 
-import static org.springframework.restdocs.restassured.RestAssuredRestDocumentation.documentationConfiguration
+import static org.springframework.restdocs.restassured3.RestAssuredRestDocumentation.documentationConfiguration
 
-import com.jayway.restassured.builder.RequestSpecBuilder
-import com.jayway.restassured.specification.RequestSpecification
+import io.restassured.builder.RequestSpecBuilder
+import io.restassured.specification.RequestSpecification
 import org.junit.Rule
 import org.springframework.restdocs.JUnitRestDocumentation
 import ratpack.examples.book.fixture.ExampleBooksApplicationUnderTest

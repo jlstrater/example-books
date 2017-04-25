@@ -1,15 +1,15 @@
 package ratpack.examples.book.docs
 
 import static org.hamcrest.CoreMatchers.is
-import static com.jayway.restassured.RestAssured.given
+import static io.restassured.RestAssured.given
 import static org.springframework.restdocs.operation.preprocess.Preprocessors.preprocessRequest
 import static org.springframework.restdocs.operation.preprocess.Preprocessors.preprocessResponse
 import static org.springframework.restdocs.operation.preprocess.Preprocessors.prettyPrint
 import static org.springframework.restdocs.payload.PayloadDocumentation.fieldWithPath
 import static org.springframework.restdocs.payload.PayloadDocumentation.requestFields
 import static org.springframework.restdocs.payload.PayloadDocumentation.responseFields
-import static org.springframework.restdocs.restassured.operation.preprocess.RestAssuredPreprocessors.modifyUris
-import static org.springframework.restdocs.restassured.RestAssuredRestDocumentation.document
+import static org.springframework.restdocs.restassured3.operation.preprocess.RestAssuredPreprocessors.modifyUris
+import static org.springframework.restdocs.restassured3.RestAssuredRestDocumentation.document
 
 import groovy.json.JsonOutput
 import groovy.sql.Sql

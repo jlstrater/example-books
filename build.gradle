@@ -10,7 +10,6 @@ repositories {
   jcenter()
   maven { url "https://oss.jfrog.org/repo" }
   maven { url "https://nexus.codehaus.org/content/repositories/snapshots/" }
-  maven { url 'https://repo.spring.io/libs-snapshot' }
 }
 
 dependencies {

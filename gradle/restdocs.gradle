@@ -1,5 +1,6 @@
 dependencies {
-    testCompile 'org.springframework.restdocs:spring-restdocs-restassured:1.1.0.RELEASE'
+    testCompile 'org.springframework.restdocs:spring-restdocs-restassured:1.2.0.RELEASE'
+    testCompile "io.rest-assured:rest-assured:3.0.2"
 }
 
 ext {
