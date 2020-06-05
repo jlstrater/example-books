@@ -1,6 +1,7 @@
 package ratpack.examples.book
 
 import geb.spock.GebReportingSpec
+import org.junit.Ignore
 import ratpack.examples.book.fixture.ExampleBooksApplicationUnderTest
 import ratpack.examples.book.pages.BooksPage
 import ratpack.examples.book.pages.LoginPage
@@ -9,6 +10,7 @@ import spock.lang.Shared
 import spock.lang.Stepwise
 
 @Stepwise
+@Ignore
 class LoginFunctionalSpec extends GebReportingSpec {
 
     @Shared

@@ -36,7 +36,6 @@ ratpack {
         require("/metrics", DropwizardMetricsConfig)
     }
     bindings {
-        moduleConfig(DropwizardMetricsModule, DropwizardMetricsConfig)
         bind DatabaseHealthCheck
         module HikariModule, { HikariConfig c ->
             c.addDataSourceProperty("URL", "jdbc:h2:mem:dev;INIT=CREATE SCHEMA IF NOT EXISTS DEV")
@@ -47,6 +46,7 @@ ratpack {
         module SessionModule
         module MarkupTemplateModule
         module new HystrixModule().sse()
+        module DropwizardMetricsModule
         bind MarkupTemplateRenderableDecorator
 
         bindInstance Service, new Service() {

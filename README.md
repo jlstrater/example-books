@@ -1,6 +1,13 @@
 example-books
 =============
 
+---
+**NOTE**
+
+Forked from [ratpack/example-books](https://github.com/ratpack/example-books)*
+
+---
+
 An example Groovy &amp; Gradle based Ratpack app.
 
 This app demonstrates

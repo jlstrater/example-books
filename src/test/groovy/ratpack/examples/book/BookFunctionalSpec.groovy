@@ -2,6 +2,7 @@ package ratpack.examples.book
 
 import geb.spock.GebReportingSpec
 import groovy.sql.Sql
+import org.junit.Ignore
 import ratpack.examples.book.fixture.ExampleBooksApplicationUnderTest
 import ratpack.examples.book.pages.BooksPage
 import ratpack.examples.book.pages.CreateBookPage
@@ -14,6 +15,7 @@ import spock.lang.Shared
 import spock.lang.Stepwise
 
 @Stepwise
+@Ignore
 class BookFunctionalSpec extends GebReportingSpec {
 
     @Shared

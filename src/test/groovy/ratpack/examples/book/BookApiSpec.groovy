@@ -36,12 +36,6 @@ class BookApiSpec extends Specification {
         System.setProperty('eb.isbndb.apikey', "fakeapikey")
     }
 
-    def cleanup() {
-        remote.exec {
-            get(Sql).execute("delete from books")
-        }
-    }
-
     def cleanupSpec() {
         System.clearProperty('eb.isbndb.host')
     }

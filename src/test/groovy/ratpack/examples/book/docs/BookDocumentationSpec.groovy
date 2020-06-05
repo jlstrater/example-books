@@ -1,15 +1,15 @@
 package ratpack.examples.book.docs
 
 import static org.hamcrest.CoreMatchers.is
-import static com.jayway.restassured.RestAssured.given
+import static io.restassured.RestAssured.given
 import static org.springframework.restdocs.operation.preprocess.Preprocessors.preprocessRequest
 import static org.springframework.restdocs.operation.preprocess.Preprocessors.preprocessResponse
 import static org.springframework.restdocs.operation.preprocess.Preprocessors.prettyPrint
 import static org.springframework.restdocs.payload.PayloadDocumentation.fieldWithPath
 import static org.springframework.restdocs.payload.PayloadDocumentation.requestFields
 import static org.springframework.restdocs.payload.PayloadDocumentation.responseFields
-import static org.springframework.restdocs.restassured.operation.preprocess.RestAssuredPreprocessors.modifyUris
-import static org.springframework.restdocs.restassured.RestAssuredRestDocumentation.document
+import static org.springframework.restdocs.operation.preprocess.Preprocessors.modifyUris
+import static org.springframework.restdocs.restassured3.RestAssuredRestDocumentation.document
 
 import groovy.json.JsonOutput
 import groovy.sql.Sql
@@ -53,12 +53,6 @@ class BookDocumentationSpec extends BaseDocumentationSpec {
             requestSpec.body.text(JsonOutput.toJson([isbn: "1932394842", quantity: 0, price: 22.34]))
         }
         post("api/book")
-    }
-
-    def cleanup() {
-        remote.exec {
-            get(Sql).execute("delete from books")
-        }
     }
 
     def "test and document create book"() {
